@@ -41,4 +41,4 @@ jobs:
                 az deployment group create \
                 --name deploy-${{ github.run_id }} \
                 --resource-group rg-gab-auckland-demo \
-                --template-file main.bicep 
+                --template-file Infra\infra.bicep 
