@@ -1,8 +1,10 @@
-param name string
-param webSiteName string
+
+param name string = 'gab-app-service-plan'
+param webSiteName string = 'gab-auckland-app'
 param linuxFxVersion string = 'DOTNETCORE|8.0'
 param location string = resourceGroup().location
 param sku string = 'F1'
+
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-06-01' = {
   name: name
