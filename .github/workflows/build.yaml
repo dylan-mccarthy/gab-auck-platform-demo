@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: '8.0.x'
     - name: Restore dependencies
-      run: dotnet restore Platform/DemoApp/DemoApp.csproj
+      run: dotnet restore DemoApp/DemoApp.csproj
     - name: Build
-      run: dotnet build Platform/DemoApp/DemoApp.csproj --no-restore
+      run: dotnet build DemoApp/DemoApp.csproj --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
@@ -38,12 +38,12 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore Platform/DemoApp/DemoApp.csproj
+      run: dotnet restore DemoApp/DemoApp.csproj
 
     - name: Build
-      run: dotnet build Platform/DemoApp/DemoApp.csproj --no-restore
+      run: dotnet build DemoApp/DemoApp.csproj --no-restore
 
     - name: Publish
-      run: dotnet publish Platform/DemoApp/DemoApp.csproj --no-build --output ./publish
+      run: dotnet publish DemoApp/DemoApp.csproj --no-build --output ./publish
 
     # Add your deployment steps here
