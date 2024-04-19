@@ -49,4 +49,9 @@ jobs:
     - name: Publish
       run: dotnet publish DemoApp/DemoApp.csproj --output ./publish
 
-    # Add your deployment steps here
+      # Deploy to Azure Web apps
+    - name: 'Run Azure webapp deploy action using publish profile credentials'
+      uses: azure/webapps-deploy@v3
+      with: 
+          app-name: 'gab-demo-app'
+          package: 'publish'

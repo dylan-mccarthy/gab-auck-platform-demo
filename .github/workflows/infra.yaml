@@ -1,4 +1,4 @@
-name: 'Bicep Whatif / Deploy'
+name: 'Deploy Infra'
 
 on:
   push:
